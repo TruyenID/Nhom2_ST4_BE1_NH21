@@ -9,6 +9,39 @@ class Product extends Db
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
+    
+    public function getNewProductsLapTops()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE type_id = 2 ORDER BY created_at DESC LIMIT 10");
+        $sql -> execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
+    public function getNewProductsSmartPhones()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE type_id = 1 ORDER BY created_at DESC LIMIT 10");
+        $sql -> execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
+    public function getNewProductsTablets()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE type_id = 3 ORDER BY created_at DESC LIMIT 10");
+        $sql -> execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
+    public function getNewProductsAcc()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE type_id = 4 ORDER BY created_at DESC LIMIT 10");
+        $sql -> execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
     public function getAllProduct()
     {
         $sql = self::$connection->prepare("SELECT * FROM products WHERE feature = 1");
