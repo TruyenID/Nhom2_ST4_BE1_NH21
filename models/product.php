@@ -65,5 +65,37 @@ class Product extends Db
         }
         return $link;
     }
-
+    
+    public function getNProductLapTop()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE type_id = 2 ORDER BY created_at DESC LIMIT 10 ");
+        $sql -> execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
+    public function getNProductSmartPhone()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE type_id = 1 ORDER BY created_at DESC LIMIT 10 ");
+        $sql -> execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    } 
+    public function getNProductTablet()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE type_id = 3 ORDER BY created_at DESC LIMIT 10 ");
+        $sql -> execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
+    public function getNProductAcc()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE type_id = 4 ORDER BY created_at DESC LIMIT 10 ");
+        $sql -> execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
 }
