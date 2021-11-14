@@ -389,7 +389,7 @@
 								<!-- tab -->
 								<div id="tab5" class="tab-pane fade in active">
 									<div class="products-slick" data-nav="#slick-nav-2">
-										<?php foreach($getNProductLapTop as $value): ?>
+										<?php foreach($getNewProductsLapTop as $value): ?>
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
@@ -423,9 +423,9 @@
 								</div>
 								<!-- /tab -->
 								<!-- tab -->
-								<div id="tab6" class="tab-pane fade in active">
+								<div id="tab6" class="tab-pane">
 									<div class="products-slick" data-nav="#slick-nav-2">
-										<?php foreach($getNProductSmartPhone as $value): ?>
+										<?php foreach($getNewProductsPhone as $value): ?>
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
@@ -459,9 +459,9 @@
 								</div>
 								<!-- /tab -->
 								<!-- tab -->
-								<div id="tab7" class="tab-pane fade in active">
+								<div id="tab7" class="tab-pane">
 									<div class="products-slick" data-nav="#slick-nav-2">
-										<?php foreach($getNProductTablet as $value): ?>
+										<?php foreach($getNewProductsTablet as $value): ?>
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
@@ -495,9 +495,9 @@
 								</div>
 								<!-- /tab -->
 								<!-- tab -->
-								<div id="tab8" class="tab-pane fade in active">
+								<div id="tab8" class="tab-pane">
 									<div class="products-slick" data-nav="#slick-nav-2">
-										<?php foreach($getNProductAcc as $value): ?>
+										<?php foreach($getNewProductsAccessories as $value): ?>
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
