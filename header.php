@@ -11,20 +11,15 @@ $getAllProtype = $protype->getAllProtype();
 ?>
 <!-- Google font -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
-
 <!-- Bootstrap -->
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
-
 <!-- Slick -->
 <link type="text/css" rel="stylesheet" href="css/slick.css"/>
 <link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
-
 <!-- nouislider -->
 <link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
-
 <!-- Font Awesome Icon -->
 <link rel="stylesheet" href="css/font-awesome.min.css">
-
 <!-- Custom stlylesheet -->
 <link type="text/css" rel="stylesheet" href="css/style.css"/>
 <!-- HEADER -->
@@ -44,7 +39,6 @@ $getAllProtype = $protype->getAllProtype();
 				</div>
 			</div>
 			<!-- /TOP HEADER -->
-
 			<!-- MAIN HEADER -->
 			<div id="header">
 				<!-- container -->
@@ -60,7 +54,6 @@ $getAllProtype = $protype->getAllProtype();
 							</div>
 						</div>
 						<!-- /LOGO -->
-
 						<!-- SEARCH BAR -->
 						<div class="col-md-6">
 							<div class="header-search">
@@ -76,7 +69,6 @@ $getAllProtype = $protype->getAllProtype();
 							</div>
 						</div>
 						<!-- /SEARCH BAR -->
-
 						<!-- ACCOUNT -->
 						<div class="col-md-3 clearfix">
 							<div class="header-ctn">
@@ -93,6 +85,7 @@ $getAllProtype = $protype->getAllProtype();
 								<!-- Cart -->
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+									<a href="cart.php">
 										<i class="fa fa-shopping-cart"></i>
 										<span>Your Cart</span>
 										<div class="qty">3</div>
