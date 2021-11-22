@@ -10,8 +10,8 @@ class Product extends Db
         $sql->execute();
         $items = array();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
-        return $items; //return an array
-    }
+        return $items;
+        }
     
     public function getAllProduct()
     {
