@@ -2,7 +2,11 @@
 require "config.php";
 require "models/db.php";
 require "models/product.php";
+require "models/manufactures.php";
+require "models/protype.php";
+$protype = new Protype;
 $product = new Product;
+$manu = new Manufacture;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -238,15 +242,15 @@ $product = new Product;
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/project-add.html" class="nav-link">
+                <a href="addproduct.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Project Add</p>
+                  <p>Add Product</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/examples/project-edit.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Project Edit</p>
+                  <p>Edit Product</p>
                 </a>
             </li>
         </ul>

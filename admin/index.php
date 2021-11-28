@@ -1,4 +1,6 @@
-<?php include "header.php" ?>
+<?php
+  include "header.php"
+?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -603,5 +605,7 @@
     </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
- <?php include "footer.html" ?>
+<!-- /.content-wrapper -->
+  <?php
+  include "footer.php"
+?>

@@ -1,14 +1,13 @@
 <?php
-    class Manufactures extends Db{
-        public function getAllProducts()
+    class Manufacture extends Db{
+        public function getAllManus()
         {
         $sql = self::$connection->prepare("SELECT * 
-        FROM products,manufactures,protypes
-        WHERE products.manu_id = manufactures.manu_id
-        AND products.type_id = protypes.type_id");
+        FROM manufactures");
         $sql->execute();
         $items = array();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items;
         }
     }
+
