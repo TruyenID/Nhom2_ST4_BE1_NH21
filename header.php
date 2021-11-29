@@ -77,7 +77,6 @@ $getAllProtype = $protype->getAllProtype();
 									<a href="#">
 										<i class="fa fa-heart-o"></i>
 										<span>Your Wishlist</span>
-										<div class="qty">2</div>
 									</a>
 								</div>
 								<!-- /Wishlist -->
@@ -88,7 +87,6 @@ $getAllProtype = $protype->getAllProtype();
 									<a href="cart.php">
 										<i class="fa fa-shopping-cart"></i>
 										<span>Your Cart</span>
-										<div class="qty">3</div>
 									</a>
 								</div>
 								<!-- /Cart -->
