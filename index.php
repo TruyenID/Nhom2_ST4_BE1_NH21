@@ -127,7 +127,7 @@
 											foreach ($getNProductLapTop as $value):
 										?>
 										<!-- product -->
-										<form action="cart.php" method="post">
+										
 										<div class="product">
 											<div class="product-img">
 												<img src="./img/<?php echo $value['image'] ?>" alt="">
@@ -155,6 +155,7 @@
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>
 											</div>
+											<form action="cart.php" method="post">
 											<div class="add-to-cart">
 												<button class="add-to-cart-btn">
 												<i class="fa fa-shopping-cart"></i>
@@ -165,8 +166,9 @@
 											<input type="hidden" name="hidden_name" value="<?php echo $value['name'];?>">
 											<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
 											<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
+											</form>
 										</div>
-										</form>
+										
 										<!-- /product -->
 										<?php  endforeach;?>		
 																			
@@ -182,7 +184,7 @@
 											foreach ($getNProductSmartPhone as $value):
 										?>
 										<!-- product -->
-										<form action="cart.php" method="post">
+										
 										<div class="product">
 											<div class="product-img">
 												<img src="./img/<?php echo $value['image'] ?>" alt="">
@@ -208,6 +210,7 @@
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>
 											</div>
+											<form action="cart.php" method="post">
 											<div class="add-to-cart">
 												<button class="add-to-cart-btn">
 												<i class="fa fa-shopping-cart"></i>
@@ -218,8 +221,9 @@
 											<input type="hidden" name="hidden_name" value="<?php echo $value['name'];?>">
 											<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
 											<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
+											</form>
 										</div>
-										</form>
+										
 										<!-- /product -->
 										<?php  endforeach;?>		
 																			
@@ -235,7 +239,7 @@
 											foreach ($getNProductTablet as $value):
 										?>
 										<!-- product -->
-										<form action="cart.php" method="post">
+										
 										<div class="product">
 											<div class="product-img">
 												<img src="./img/<?php echo $value['image'] ?>" alt="">
@@ -261,6 +265,7 @@
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>
 											</div>
+											<form action="cart.php" method="post">
 											<div class="add-to-cart">
 												<button class="add-to-cart-btn">
 												<i class="fa fa-shopping-cart"></i>
@@ -271,10 +276,11 @@
 											<input type="hidden" name="hidden_name" value="<?php echo $value['name'];?>">
 											<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
 											<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
+											</form>	
 										</div>
 										<!-- /product -->
 										<?php  endforeach;?>		
-										</form>							
+																
 									</div>	
 															
 								</div>	
@@ -287,7 +293,7 @@
 											foreach ($getNProductAcc as $value):
 										?>
 										<!-- product -->
-										<form action="cart.php" method="post">
+										
 										<div class="product">
 											<div class="product-img">
 												<img src="./img/<?php echo $value['image'] ?>" alt="">
@@ -313,6 +319,7 @@
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>
 											</div>
+											<form action="cart.php" method="post">
 											<div class="add-to-cart">
 												<button class="add-to-cart-btn">
 												<i class="fa fa-shopping-cart"></i>
@@ -323,8 +330,9 @@
 											<input type="hidden" name="hidden_name" value="<?php echo $value['name'];?>">
 											<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
 											<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
+											</form>
 										</div>
-										</form>
+										
 										<!-- /product -->
 										<?php  endforeach;?>		
 																			
@@ -429,7 +437,7 @@
 									<div class="products-slick" data-nav="#slick-nav-2">
 										<?php foreach($getNProductLapTop as $value): ?>
 										<!-- product -->
-										<form action="cart.php" method="post">
+										
 										<div class="product">
 											<div class="product-img">
 												<img src="./img/<?php echo $value['image'] ?>" alt="">
@@ -451,6 +459,7 @@
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>
 											</div>
+											<form action="cart.php" method="post">
 											<div class="add-to-cart">
 												<button class="add-to-cart-btn">
 												<i class="fa fa-shopping-cart"></i>
@@ -461,8 +470,9 @@
 											<input type="hidden" name="hidden_name" value="<?php echo $value['name'];?>">
 											<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
 											<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
+											</form>
 										</div>
-										</form>
+										
 										<!-- /product -->
 										<?php endforeach ?>
 									</div>
@@ -475,7 +485,7 @@
 									<div class="products-slick" data-nav="#slick-nav-2">
 										<?php foreach($getNProductSmartPhone as $value): ?>
 										<!-- product -->
-										<form action="cart.php" method="post">
+										
 										<div class="product">
 											<div class="product-img">
 												<img src="./img/<?php echo $value['image'] ?>" alt="">
@@ -497,6 +507,7 @@
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>
 											</div>
+											<form action="cart.php" method="post">
 											<div class="add-to-cart">
 												<button class="add-to-cart-btn">
 												<i class="fa fa-shopping-cart"></i>
@@ -507,8 +518,9 @@
 											<input type="hidden" name="hidden_name" value="<?php echo $value['name'];?>">
 											<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
 											<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
+											</form>
 										</div>
-										</form>
+										
 										<!-- /product -->
 										<?php endforeach ?>
 									</div>
@@ -521,7 +533,7 @@
 									<div class="products-slick" data-nav="#slick-nav-2">
 										<?php foreach($getNProductTablet as $value): ?>
 										<!-- product -->
-										<form action="cart.php" method="post">
+										
 										<div class="product">
 											<div class="product-img">
 												<img src="./img/<?php echo $value['image'] ?>" alt="">
@@ -543,6 +555,7 @@
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>
 											</div>
+											<form action="cart.php" method="post">
 											<div class="add-to-cart">
 												<button class="add-to-cart-btn">
 												<i class="fa fa-shopping-cart"></i>
@@ -553,8 +566,9 @@
 											<input type="hidden" name="hidden_name" value="<?php echo $value['name'];?>">
 											<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
 											<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
+											</form>
 										</div>
-										</form>
+										
 										<!-- /product -->
 										<?php endforeach ?>
 									</div>
@@ -567,7 +581,7 @@
 									<div class="products-slick" data-nav="#slick-nav-2">
 										<?php foreach($getNProductAcc as $value): ?>
 										<!-- product -->
-										<form action="cart.php" method="post">
+										
 										<div class="product">
 											<div class="product-img">
 												<img src="./img/<?php echo $value['image'] ?>" alt="">
@@ -589,6 +603,7 @@
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>
 											</div>
+											<form action="cart.php" method="post">
 											<div class="add-to-cart">
 												<button class="add-to-cart-btn">
 												<i class="fa fa-shopping-cart"></i>
@@ -599,8 +614,9 @@
 											<input type="hidden" name="hidden_name" value="<?php echo $value['name'];?>">
 											<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
 											<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
+											</form>
 										</div>
-										</form>
+										
 										<!-- /product -->
 										<?php endforeach ?>
 									</div>
