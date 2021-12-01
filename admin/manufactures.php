@@ -47,18 +47,13 @@
               </thead>
               <tbody>
                   <?php
-                    $getAllProducts = $product->getAllProducts();
-                    foreach($getAllProducts as $value):
+                    $getAllManus = $manu->getAllManus();
+                    foreach($getAllManus as $value):
                   ?>
                   <tr>
-                      <td><?php echo $value['id'] ?></td>
+                      <td><?php echo $value['manu_id'] ?></td>
                       <td><a><?php echo $value['manu_name']?></a><br/></td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="#">
-                              <i class="fas fa-folder">
-                              </i>
-                              View
-                          </a>
                           <a class="btn btn-info btn-sm" href="#">
                               <i class="fas fa-pencil-alt">
                               </i>

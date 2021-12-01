@@ -8,6 +8,7 @@ if(!isset($_SESSION['cart'])) $_SESSION['cart'] = [];
     array_splice($_SESSION['cart'],$_GET['delid'],1);
   }
 //lay du lieu tu form
+
 if(isset($_POST['addcart']) && $_POST['addcart']){
   $name = $_POST['hidden_name'];
   $image = $_POST['hidden_image'];
@@ -18,7 +19,7 @@ if(isset($_POST['addcart']) && $_POST['addcart']){
 
   for($i = 0; $i < sizeof($_SESSION['cart']); $i++){
     if($_SESSION['cart'][$i][0]==$name){
-      $flag=0;
+      $flag=1;
       $quantityNew = $quantity+$_SESSION['cart'][$i][3];
       $_SESSION['cart'][$i][3]=$quantityNew;
       break;
@@ -36,7 +37,7 @@ function showCart(){
   if($_SESSION['cart'] && (is_array($_SESSION['cart']))){
     $total = 0;
     for($i = 0; $i < sizeof($_SESSION['cart']); $i++){
-      $total += $_SESSION['cart'][$i][2];
+      $total += ($_SESSION['cart'][$i][2]*$_SESSION['cart'][$i][3]);
       echo '<tr>
             <td>'.$_SESSION['cart'][$i][0].'</td>
             <td><img src="./img/'.$_SESSION['cart'][$i][1].'" alt="loi" style="width:80px" ></td>

@@ -47,11 +47,11 @@
               </thead>
               <tbody>
                   <?php
-                    $getAllProducts = $product->getAllProducts();
-                    foreach($getAllProducts as $value):
+                    $getAllProtype = $protype->getAllProtype();
+                    foreach($getAllProtype as $value):
                   ?>
                   <tr>
-                      <td><?php echo $value['id'] ?></td>
+                      <td><?php echo $value['type_id'] ?></td>
                       <td><a><?php echo $value['type_name']?></a><br/></td>
                       <td class="project-actions text-right">
                           <a class="btn btn-primary btn-sm" href="#">
