@@ -147,13 +147,22 @@
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
 												</div>
-												<div class="product-btns">
+												<form action="whistlist.php?id=<?php echo $value['id']?>" method="post">
+												<div class="product-btns">			
 													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">
 													add to wishlist
 													</span></button>
+													<input type="hidden" name="hidden_id" value="<?php echo $value['id'];?>">
+													<input type="hidden" name="hidden_name" value="<?php echo $value['name'];?>">
+													<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
+													<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
+													<input type="hidden" name="quantity" value="1">
+												</div>
+												</form>
+												<div class="product-btns">	
 													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-												</div>
+												</div>																		
 											</div>
 											<form action="cart.php" method="post">
 											<div class="add-to-cart">

@@ -74,7 +74,7 @@ $getAllProtype = $protype->getAllProtype();
 							<div class="header-ctn">
 								<!-- Wishlist -->
 								<div>
-									<a href="#">
+									<a href="whistlist.php">
 										<i class="fa fa-heart-o"></i>
 										<span>Your Wishlist</span>
 									</a>
