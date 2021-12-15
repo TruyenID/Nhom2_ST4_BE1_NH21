@@ -48,7 +48,8 @@
 						<input type="checkbox">Remember Me
 					</div>
 					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-right login_btn" name="submit">
+						<input type="submit" value="Login" class="btn float-left login_btn" name="submit">
+						<a href="../register.php" class="btn float-right login_btn">Register</a>
 					</div>
 				</form>
 			</div>

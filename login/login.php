@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
     if($user->checkLogin($username, $password)){
         $_SESSION['user'] = $username;
         header('location:../admin');
-    }else{
+    }else {
         header('location:index.php');
     }
 }
