@@ -2,7 +2,7 @@
     class User extends Db{
         public function checkLogin($username,$password)
         {
-            $sql = self::$connection->prepare("SELECT * FROM users WHERE `username`=? AND `password`=?");
+            $sql = self::$connection->prepare("SELECT * FROM user WHERE `username`=? AND `password`=?");
             $password = md5($password);
             $sql->bind_param("ss",$username,$password);
             $sql->execute();
@@ -15,4 +15,12 @@
                 return false;
             }
         }
+        public function addUser($username,$password,$role_id)
+        {
+        $sql = self::$connection->prepare("INSERT 
+        INTO `user`(`username`, `password`, `role_id`) 
+        VALUES (?,?,?)");
+        $sql->bind_param("siiiss", $username,$password,$role_id);
+        return $sql->execute(); //return an object
+        }  
     }

@@ -157,6 +157,7 @@
             *{
                 box-sizing: border-box;
             }
+            
         </style>
 </head>
 <body>
@@ -180,7 +181,7 @@
 					<div class="add-to-cart">
 					<button class="add-to-cart-btn">
 					<i class="fa fa-shopping-cart"></i>
-					<input type="submit" name ="addcart" syle="margin:none" value ="Add to cart">			
+					<input class="addtocart" type="submit" name ="addcart" syle="margin:none" value ="Add to cart">			
 					</button>
 					</div>
 					<input type="hidden" name="quantity" value="1">
@@ -195,8 +196,12 @@
                 </p>
             </div>
             <?php endforeach; ?>
+<<<<<<< HEAD
 
         </div>     
+=======
+        </div>
+>>>>>>> 4f9ac7cfeb104a0d5346d8d66d46ab363263d1c2
     </div>
 </body>
 </html>
