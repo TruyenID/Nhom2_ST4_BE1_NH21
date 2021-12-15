@@ -65,10 +65,10 @@
                       <td class="project-state"><?php echo $value['type_name'] ?></td>
                       <td class="project-state"><?php echo substr($value['description'],0,50)?></td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="editproduct.php?id=<?php echo $value['id']?>">
-                              <i class="fas fa-folder">
+                          <a class="btn btn-info btn-sm" href="editproduct.php?id=<?php echo $value['id']?>">
+                              <i class="fas fa-pencil-alt">
                               </i>
-                              View
+                              Edit
                           </a>
                           <a class="btn btn-danger btn-sm" href="delete.php?id=<?php echo $value['id']?>">
                               <i class="fas fa-trash">

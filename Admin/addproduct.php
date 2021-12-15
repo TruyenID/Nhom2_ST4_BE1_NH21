@@ -76,7 +76,7 @@
               </div>
               <div class="form-group">
                 <label for="inputDescription">Description</label>
-                <textarea id="inputDescription" class="form-control" rows="4"  name="des"></textarea>
+                <textarea id="summernote" class="form-control" rows="4"  name="des"></textarea>
               </div>
             </div>
             <!-- /.card-body -->

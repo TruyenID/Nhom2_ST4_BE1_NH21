@@ -162,7 +162,7 @@
 <body>
     <?php include "header.php"?>
     <div class="container-m">
-        <h2>Chi tiết sản phẩm</h2>
+        <h2>Detail Product</h2>
         <?php 
             if(isset($_GET['id']))
                 $id = $_GET['id'];
@@ -195,8 +195,8 @@
                 </p>
             </div>
             <?php endforeach; ?>
-        </div>
-        
+
+        </div>     
     </div>
 </body>
 </html>
