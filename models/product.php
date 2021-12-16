@@ -102,4 +102,13 @@ class Product extends Db
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
+    public function getProductByTypeId($id)
+    {
+    $sql = self::$connection->prepare("SELECT * FROM `products` WHERE `type_id` = ?");
+    $sql->bind_param("i",$id);
+    $sql->execute();
+    $items = array();
+    $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+    return $items; //return an array
+    }
 }

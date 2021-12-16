@@ -196,13 +196,123 @@
                 </p>
             </div>
             <?php endforeach; ?>
-<<<<<<< HEAD
-
-        </div>     
-=======
         </div>
->>>>>>> 4f9ac7cfeb104a0d5346d8d66d46ab363263d1c2
     </div>
+    <!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+
+					<!-- section title -->
+					<div class="col-md-12">
+						<div class="section-title">
+							<h3 class="title">Related Products</h3>
+							
+						</div>
+					</div>
+					<!-- /section title -->
+
+					<!-- Products tab & slick -->
+					<div class="col-md-12">
+						<div class="row">
+							<div class="products-tabs">
+								<!-- tab -->
+								<div id="tab1" class="tab-pane active">
+									<div class="products-slick" data-nav="#slick-nav-1">
+										<?php
+                                            $type_id = $_POST['hidden_typeId'];							
+											$getProductByTypeId = $product->getProductByTypeId($type_id);								
+											foreach ($getProductByTypeId as $value):
+										?>
+										<!-- product -->
+										
+										<div class="product">
+											<div class="product-img">
+												<img src="./img/<?php echo $value['image'] ?>" alt="">
+												<div class="product-label">
+													<span class="sale">-30%</span>
+													<span class="new">NEW</span>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">Category</p>
+												<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
+												<h4 class="product-price"><?php echo number_format($value['price']) ?></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<form action="whistlist.php?id=<?php echo $value['id']?>" method="post">
+												<div class="product-btns">			
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">
+													add to wishlist
+													</span></button>
+													<input type="hidden" name="hidden_id" value="<?php echo $value['id'];?>">
+													<input type="hidden" name="hidden_name" value="<?php echo $value['name'];?>">
+													<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
+													<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
+													<input type="hidden" name="quantity" value="1">
+												</div>
+												</form>
+												<form action="detail.php?id=<?php echo $value['id']?>" method="post">
+												<div class="product-btns">	
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+												</div>	
+												</form>																	
+											</div>
+											<form action="cart.php" method="post">
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn">
+												<i class="fa fa-shopping-cart"></i>
+												<input type="submit" name ="addcart" syle="margin:none" value ="Add to cart">			
+												</button>
+											</div>
+											<input type="hidden" name="quantity" value="1">
+											<input type="hidden" name="hidden_name" value="<?php echo $value['name'];?>">
+											<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
+											<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
+											</form>
+										</div>
+										
+										<!-- /product -->
+										<?php  endforeach;?>		
+																			
+									</div>	
+															
+								</div>	
+								<!-- tab -->
+								
+								
+							</div>
+									
+						</div>
+						
+					</div>			
+						
+					<!-- Products tab & slick -->
+					
+				</div>
+							
+				<!-- /row -->
+				
+			</div>	
+				
+			<!-- /container -->
+		</div>
+        <?php include "footer.html" ?>
+		<!-- /SECTION -->
+        <script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/jquery.zoom.min.js"></script>
+		<script src="js/main.js"></script>
 </body>
 </html>
 

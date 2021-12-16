@@ -111,6 +111,7 @@
 													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>	
+												<input type="hidden" name="hidden_typeId" value="<?php echo $value['type_id'];?>">
 												</form>																	
 											</div>
 											<form action="cart.php" method="post">
@@ -124,6 +125,7 @@
 											<input type="hidden" name="hidden_name" value="<?php echo $value['name'];?>">
 											<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
 											<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
+											
 											</form>
 										</div>
 										
@@ -179,6 +181,7 @@
 													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>	
+												<input type="hidden" name="hidden_typeId" value="<?php echo $value['type_id'];?>">
 												</form>	
 											</div>
 											<form action="cart.php" method="post">
@@ -247,6 +250,7 @@
 													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>	
+												<input type="hidden" name="hidden_typeId" value="<?php echo $value['type_id'];?>">
 												</form>	
 											</div>
 											<form action="cart.php" method="post">
@@ -314,6 +318,7 @@
 													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>	
+												<input type="hidden" name="hidden_typeId" value="<?php echo $value['type_id'];?>">
 												</form>	
 											</div>
 											<form action="cart.php" method="post">
@@ -467,6 +472,7 @@
 													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>	
+												<input type="hidden" name="hidden_typeId" value="<?php echo $value['type_id'];?>">
 												</form>	
 											</div>
 											<form action="cart.php" method="post">
@@ -528,6 +534,7 @@
 													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>	
+												<input type="hidden" name="hidden_typeId" value="<?php echo $value['type_id'];?>">
 												</form>	
 											</div>
 											<form action="cart.php" method="post">
@@ -589,6 +596,7 @@
 													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>	
+												<input type="hidden" name="hidden_typeId" value="<?php echo $value['type_id'];?>">
 												</form>	
 											</div>
 											<form action="cart.php" method="post">
@@ -650,6 +658,7 @@
 													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
 													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 												</div>	
+												<input type="hidden" name="hidden_typeId" value="<?php echo $value['type_id'];?>">
 												</form>	
 											</div>
 											<form action="cart.php" method="post">
