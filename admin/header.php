@@ -4,9 +4,11 @@ require "models/db.php";
 require "models/product.php";
 require "models/manufactures.php";
 require "models/protype.php";
+require "models/user.php";
 $protype = new Protype;
 $product = new Product;
 $manu = new Manufacture;
+$user = new User;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -134,21 +136,15 @@ $manu = new Manufacture;
                 </a>
               </li>
               <li class="nav-item">
-                <a href="manufactures.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Manufactures</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="protypes.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Protype</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="addproduct.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Product</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="manufactures.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Manufactures</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -158,12 +154,30 @@ $manu = new Manufacture;
                 </a>
               </li>
               <li class="nav-item">
+                <a href="protypes.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Protype</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="addprotype.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Protype</p>
                 </a>
               </li>
-              
+              <li class="nav-item">
+
+                <a href="User.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>User</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="Useradd.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add User</p>
+                </a>
+              </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

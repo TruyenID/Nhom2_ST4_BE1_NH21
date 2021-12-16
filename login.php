@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="css/styleslogin.css">
 </head>
 <body>
 <div class="container">
@@ -31,34 +31,30 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<form action="login.php" method="post">
+				<form action="login_submit.php" method="post">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="username" name="username">
+						<input type="text" class="form-control" placeholder="username" name="username" require>
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="password" name="password">
+						<input type="password" class="form-control" placeholder="password" name="password" require>
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox">Remember Me
 					</div>
 					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-left login_btn" name="submit">
-						<a href="../register.php" class="btn float-right login_btn">Register</a>
+						<input type="submit" value="Login" class="btn float-right login_btn" name="submit">
 					</div>
 				</form>
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					Don't have an account?<a href="#">Sign Up</a>
-				</div>
-				<div class="d-flex justify-content-center">
-					<a href="#">Forgot your password?</a>
+					Don't have an account?<a href="register.php">Sign Up</a>
 				</div>
 			</div>
 		</div>

@@ -15,12 +15,4 @@
                 return false;
             }
         }
-        public function addUser($username,$password,$role_id)
-        {
-        $sql = self::$connection->prepare("INSERT 
-        INTO `user`(`username`, `password`, `role_id`) 
-        VALUES (?,?,?)");
-        $sql->bind_param("siiiss", $username,$password,$role_id);
-        return $sql->execute(); //return an object
-        }  
     }
