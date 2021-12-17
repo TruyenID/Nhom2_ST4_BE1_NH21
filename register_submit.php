@@ -8,19 +8,28 @@ if(!empty($_POST['submit'])){
     }
     $password = $_POST["password"];
     $role_id = 2;
-
-    $sql = "SELECT * FROM user WHERE username='$username'";
-
-    $old = mysqli_query($conn,$sql);
-
     $password = md5($password);
-
-    if(mysqli_num_rows($old) > 0){
-        header("location:register.php");
-    }
+    
+    $sql = "SELECT * FROM user WHERE username='$username'";
+    $old = mysqli_query($conn,$sql);
     $sql = "INSERT into user (username,password,role_id) VALUES ('$username','$password','$role_id')";
-    mysqli_query($conn,$sql);
-    echo "Sign up successfully"; 
+    if(mysqli_num_rows($old) > 0){
+        $message1 = "Tài Khoản Tồn Tại. Vui Lòng Tạo Lại !";
+        echo "<script type='text/javascript'>alert('$message1');</script>";
+        ?>
+        <a class="nav-link"  href="register.php" role="button">
+        Register</a>
+        <?php 
+    }else{      
+        mysqli_query($conn,$sql);
+        $message = "Sign up successfully! Quay Lại Để Đăng Nhập";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+        ?>
+        <a class="nav-link"  href="login.php" role="button">
+        Login</a>
+        <?php
+
+    }  
     // if($password != $repassword){
     //     header("location:register.php");
     // }
