@@ -86,7 +86,7 @@ function showCart(){
               </tbody>
           </table>
           <form action="checkout.php" method="post">
-          <button>Checkout</button> 
+          <button class="primary-btn order-submit">Checkout</button> 
                   
           </form>
         </div>
