@@ -55,8 +55,12 @@ function showCart(){
       echo '<tr>
             <td>Total</td>
             <th>'. number_format($total).' VND</th>
-            </tr>';
-    }            
+            </tr>
+            ';
+      
+      
+    }
+    
   }
 ?>
   <!-- Content Wrapper. Contains page content -->
@@ -81,6 +85,10 @@ function showCart(){
                   <?php showCart(); ?>
               </tbody>
           </table>
+          <form action="checkout.php" method="post">
+          <button>Checkout</button> 
+                  
+          </form>
         </div>
         <!-- /.card-body -->
       </div>

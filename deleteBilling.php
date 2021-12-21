@@ -1,0 +1,11 @@
+<?php 
+    session_start();
+    unset($_SESSION['cart']);
+    unset($_SESSION['fname']);
+    unset($_SESSION['lname']);
+    unset($_SESSION['email']);
+    unset($_SESSION['city']);
+    unset($_SESSION['country']);
+    unset($_SESSION['tel']);
+    header('location:billing.php');
+?>
