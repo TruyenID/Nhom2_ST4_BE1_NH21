@@ -1,7 +1,4 @@
-<?php
-session_start();
-if(!isset($_SESSION['accesstimes'])) $_SESSION['accesstimes'] = 0;
-else  $_SESSION['accesstimes'] += 1;
+<?php 
 require "config.php";
 require "models/db.php";
 require "models/product.php";
@@ -34,7 +31,7 @@ $getAllProtype = $protype->getAllProtype();
 						<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
 						<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
 						<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
-						<li style="color: #FFF;font-style: oblique;">Access times: <?php if(isset($_SESSION['accesstimes']))  echo $_SESSION['accesstimes']?> </li>
+						
 					</ul>					
 					<ul class="header-links pull-right">			
 						<li><a href="billing.php"><i class="fa fa-dollar"></i> USD</a></li>

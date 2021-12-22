@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -189,11 +190,12 @@
 					<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
 					<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
 				</form>
-            </div>
-            <div class="clear-both">
-                <p>
+                <p style="margin-top: 20px;">
                     <?php echo $value['description']?>
                 </p>
+            </div>
+            <div class="clear-both">
+                
             </div>
             <?php endforeach; ?>
         </div>

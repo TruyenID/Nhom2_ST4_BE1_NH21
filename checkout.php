@@ -1,5 +1,5 @@
 <?php
-session_start();
+	session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,11 +45,12 @@ session_start();
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
+			<form action="billing.php" method="post">
 				<div class="row">
 
 					<div class="col-md-7">
 						<!-- Billing Details -->
-						<form action="billing.php" method="post">
+					
 						<div class="billing-details">
 							<div class="section-title">
 								<h3 class="title">Billing</h3>
@@ -75,10 +76,10 @@ session_start();
 						</div>
 						<!--<a href="billing.php" class="primary-btn order-submit">Place order</a>!-->
 						<button class="primary-btn order-submit">
-						Place order
+						<input style="color: #FFF;background-color: #D10024;" type="submit" name ="billing" value ="Place order">					
 						</button>	
 												
-						</form>
+						
 						<!-- /Billing Details -->
 					</div>
 
@@ -164,6 +165,7 @@ session_start();
 					</div>
 					<!-- /Order Details -->
 				</div>
+				</form>
 				<!-- /row -->
 			</div>
 			<!-- /container -->
