@@ -194,8 +194,8 @@
                     <?php echo $value['description']?>
                 </p>
             </div>
-            <div class="clear-both">
-                
+            <div class="row">
+
             </div>
             <?php endforeach; ?>
         </div>

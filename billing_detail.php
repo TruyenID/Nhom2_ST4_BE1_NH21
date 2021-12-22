@@ -1,11 +1,8 @@
 <?php
-session_start();
-if(isset($_POST['first-name'])){$_SESSION['fname'] = $_POST['first-name'];}
-if(isset($_POST['last-name'])){$_SESSION['lname'] = $_POST['last-name'];}
-if(isset($_POST['email'])){$_SESSION['email'] = $_POST['email'];}
-if(isset($_POST['city'])){$_SESSION['city'] = $_POST['city'];}
-if(isset($_POST['country'])){$_SESSION['country'] = $_POST['country'];}
-if(isset($_POST['tel'])){$_SESSION['tel'] = $_POST['tel'];}  
+	session_start();
+    include "header.php";
+    require "models/billing.php";
+    $billing = new Billing();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,91 +42,80 @@ if(isset($_POST['tel'])){$_SESSION['tel'] = $_POST['tel'];}
 
     </head>
 	<body>
-		<?php include "header.php"?>
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
+			<form action="addbill.php" method="post">
 				<div class="row">
-
 					<div class="col-md-7">
 						<!-- Billing Details -->
+                        <?php
+                         if(isset($_GET['id_bill']))
+                            $idBill = $_GET['id_bill'];
+                            $getBillingById = $billing->getBillingById($idBill);
+                            foreach ($getBillingById as $value):
+                        ?>
 						<div class="billing-details">
 							<div class="section-title">
 								<h3 class="title">Billing</h3>
 							</div>
 							<div class="form-group">
-								<?php if(isset($_SESSION['fname'])){echo $_SESSION['fname'];}?>
+								<?php echo $value['fname']?>
 							</div>
 							<div class="form-group">
-							<?php if(isset($_SESSION['lname'])){echo $_SESSION['lname'];}?>
+                            <?php echo $value['lname']?>
 							</div>
 							<div class="form-group">
-							<?php if(isset($_SESSION['email'])){echo $_SESSION['email'];}?>
+                            <?php echo $value['email']?>
 							</div>
 							<div class="form-group">
-							<?php if(isset($_SESSION['city'])){echo $_SESSION['city'];}?>
+                            <?php echo $value['city']?>
 							</div>
 							<div class="form-group">
-							<?php if(isset($_SESSION['country'])){echo $_SESSION['country'];}?>
+							<?php echo $value['country']?>
 							</div>
 							<div class="form-group">
-							<?php if(isset($_SESSION['tel'])){echo $_SESSION['tel'];}?>
+							<?php echo $value['tel']?>
 							</div>
-							<form action="deleteBilling.php" method="post">
-							<button class="primary-btn order-submit">
-							Delete Billing
-							</button>	
-												
-							</form>
 						</div>
+						<a href="billings.php" class="primary-btn order-submit">Return</a>
+						<?php endforeach; ?>							
 						<!-- /Billing Details -->
 					</div>
+
+					<!-- Order Details -->
 					<div class="col-md-5 order-details">
 						<div class="section-title text-center">
 							<h3 class="title">Your Products</h3>
+                           
 						</div>
+                       
 						<div class="order-summary">
 							<div class="order-col">
 								<div><strong>PRODUCT</strong></div>
-								<div><strong>TOTAL</strong></div>
+                                <div><strong>TOTAL</strong></div>
 							</div>
-							<?php
-								if(isset($_SESSION['cart']) && $_SESSION['cart'] && (is_array($_SESSION['cart']))){
-									$total = 0;
-    								for($i = 0; $i < sizeof($_SESSION['cart']); $i++){
-      								$total += ($_SESSION['cart'][$i][2]*$_SESSION['cart'][$i][3]);
-										echo '
-										<div class="order-products">
-										<div class="order-col">
-											<div>'.$_SESSION['cart'][$i][3].'x '.$_SESSION['cart'][$i][0].'</div>
-											<div>'.number_format($_SESSION['cart'][$i][2]).' VND</div>
-										</div>
-										</div>
-											';
-										
-									}
-									echo '<div class="order-col">
-										<div><strong>TOTAL</strong></div>
-										<div><strong class="order-total">'. number_format($total).'</strong></div>
-										</div>';
-								}
-
-							?>
-							
-							<div class="order-col">
-								<div>Shiping</div>
-								<div><strong>FREE</strong></div>
+                            <?php 
+                            if(isset($_GET['id_bill']))
+                                $idBill = $_GET['id_bill'];
+                                $getAllCart = $billing->getAllCart($idBill);
+                                foreach ($getAllCart as $value):
+                            ?>
+							<div class="order-products">
+								<div class="order-col">
+									<div><?php echo $value['quantity']?>x <?php echo $value['name']?></div>
+									<div><?php echo $value['price']?></div>
+								</div>
 							</div>
-							
+                            <?php endforeach; ?>
 						</div>
-						
 					</div>
+					<!-- /Order Details -->
 				</div>
+				</form>
 				<!-- /row -->
-				
-				
 			</div>
 			<!-- /container -->
 		</div>
