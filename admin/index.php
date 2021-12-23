@@ -25,11 +25,15 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <div class="col-lg-2 col-6">
+          <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>Products</h3>
+                <?php
+                  $countProducts = $product->countProducts();
+                ?>
+                <h3><?php echo $countProducts; ?></h3>
+                <p>Products</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -38,11 +42,15 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-2 col-6">
+          <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>Manufactures<sup style="font-size: 20px"></sup></h3>
+                <?php 
+                  $countManus = $manu->countManus();
+                ?>
+                <h3><?php echo $countManus; ?></h3>
+                <p>Manufactures</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -51,12 +59,12 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-2 col-6">
+          <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>User</h3>
-
+                <h3>1</h3>
+                <p>User</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -65,11 +73,19 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-2 col-6">
+          </div>
+          <!-- ./col -->
+        </div>
+        <div class="row">
+        <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>Protypes</h3>
+                <?php
+                  $countProtype = $protype->countProtypes();
+                ?>
+                <h3><?php echo $countProtype;?></h3>
+                <p>Protypes</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
@@ -77,11 +93,15 @@
               <a href="protypes.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <div class="col-lg-2 col-6">
+          <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>Notification</h3>
+                <?php
+                  $countNon = $Notification->countThongBao();
+                ?>
+                <h3><?php echo $countNon;?></h3>
+                <p>Notifications</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -89,19 +109,21 @@
               <a href="Notification.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <div class="col-lg-2 col-6">
+          <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>Billings</h3>
+                <?php
+                  $countBillings = $billing->countBillings();
+                ?>
+                <h3><?php echo $countBillings;?></h3>
+                <p>Billings</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
               <a href="billings.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-          </div>
-          <!-- ./col -->
         </div>
         <!-- /.row -->
         <!-- Main row -->

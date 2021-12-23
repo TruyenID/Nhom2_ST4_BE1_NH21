@@ -35,16 +35,23 @@
         }
         public function editNotification($value,$image,$id)
         {
-        if($image == null){
-            $sql = self::$connection->prepare("UPDATE `notification` SET `value`=?,
-            `image`=? WHERE `id` =?");
-            $sql->bind_param("sss", $value,$image,$id);
-        }else{
-            $sql = self::$connection->prepare("UPDATE `notification` SET `value`=?,
-            `image`=? WHERE `id` =?");
-            $sql->bind_param("sss", $value,$image,$id);
+            if($image == null){
+                $sql = self::$connection->prepare("UPDATE `notification` SET `value`=?,
+                `image`=? WHERE `id` =?");
+                $sql->bind_param("sss", $value,$image,$id);
+            }else{
+                $sql = self::$connection->prepare("UPDATE `notification` SET `value`=?,
+                `image`=? WHERE `id` =?");
+                $sql->bind_param("sss", $value,$image,$id);
+            }
+            return $sql->execute(); //return an object        
         }
-        return $sql->execute(); //return an object
-    }          
-}
+        public function countThongBao()
+        {
+        $sql = self::$connection->prepare("SELECT COUNT(`id`) FROM `notification`");
+        $sql->execute();
+        $item = $sql->get_result()->fetch_row();
+        return $item[0];
+        }          
+    }
 ?>

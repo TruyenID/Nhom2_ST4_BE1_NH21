@@ -55,7 +55,7 @@
 								<li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
 									<li><a data-toggle="tab" href="#tab2">Smartphones</a></li>
 									<li><a data-toggle="tab" href="#tab3">Tablet</a></li>
-									<li><a data-toggle="tab" href="#tab4">Accessories</a></li>	
+									<li><a data-toggle="tab" href="#tab4">Smart Watchs</a></li>	
 								</ul>
 							</div>
 						</div>
@@ -422,7 +422,7 @@
 									<li class="active"><a data-toggle="tab" href="#tab5">Laptops</a></li>
 									<li><a data-toggle="tab" href="#tab6">Smartphones</a></li>
 									<li><a data-toggle="tab" href="#tab7">Tablets</a></li>
-									<li><a data-toggle="tab" href="#tab8">Accessories</a></li>
+									<li><a data-toggle="tab" href="#tab8">Smart Watchs</a></li>
 								</ul>
 							</div>
 						</div>

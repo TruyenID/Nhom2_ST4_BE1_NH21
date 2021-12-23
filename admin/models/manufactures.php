@@ -39,5 +39,12 @@
         $sql->bind_param("si", $name,$id);
         return $sql->execute();
         }       
+        public function countManus()
+        {
+        $sql = self::$connection->prepare("SELECT COUNT(`manu_id`) FROM `manufactures`");
+        $sql->execute();
+        $item = $sql->get_result()->fetch_row();
+        return $item[0];
+        }
     }
 
