@@ -72,7 +72,24 @@
               </div>
               <div class="form-group">
                 <label for="inputProjectLeader">Image</label>
-                <input type="file" class="form-control"  name="image">
+                <input type="file" class="form-control" id="test_input" name="image">
+                <button  class="btn btn-success" id="test_button">Check file</button>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script>
+                  $(document).ready(function(){
+                    $("#test_button").click(function() {
+                    var test_value = $("#test_input").val();
+                    var extension = test_value.split('.').pop().toLowerCase();
+                    if ($.inArray(extension, ['png', 'gif', 'jpeg', 'jpg','jfif']) == -1) {
+                    alert("File invalid!, please choose image file");
+                    return false;
+                    } else {
+                    alert("File valid!");
+                    return false;
+                    }
+                    });
+                    });
+                </script>
               </div>
               <div class="form-group">
                 <label for="inputDescription">Description</label>
