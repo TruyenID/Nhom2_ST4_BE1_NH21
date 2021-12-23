@@ -10,7 +10,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
               <li class="breadcrumb-item active">Notification Add</li>
             </ol>
           </div>
@@ -36,9 +36,9 @@
             <div class="card-body">
               <div class="form-group">
                 <label for="inputName">value</label>
-                <input type="text" id="inputName" class="form-control" name="value">
+                <input type="text" id="inputName" class="form-control" name="value" required>
                 <div class="form-group">
-                    <label for="inputProjectLeader">Image</label>
+                    <label for="inputProjectLeader">Image</label required>
                     <input type="file" class="form-control"  name="image">
               </div>
               </div>

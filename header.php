@@ -34,9 +34,9 @@ $getAllNotification = $Notification->getAllNotification();
 			<div id="top-header">
 				<div class="container">
 					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
+					<li><a href="https://www.facebook.com/K%C4%90T-Group-109013094978487/"><i class="fa fa-facebook"></i>Group TDK</a></li>
+						<li><a href="mailto:tdkgroup.tdc@gmail.com"><i class="fa fa-envelope-o"></i> kdtgroup.tdc@gmail.com</a></li>
+						<li><a href="address.html"><i class="fa fa-map-marker"></i> 200 Nguyễn Xiển, Long Thạnh Mỹ</a></li>
 					</ul>					
 					<ul class="header-links pull-right">
 						<li>

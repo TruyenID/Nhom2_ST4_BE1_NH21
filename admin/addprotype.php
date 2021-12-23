@@ -10,7 +10,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
               <li class="breadcrumb-item active">Protype Add</li>
             </ol>
           </div>
@@ -36,7 +36,7 @@
             <div class="card-body">
               <div class="form-group">
                 <label for="inputName">Name</label>
-                <input type="text" id="inputName" class="form-control" name="type_name">
+                <input type="text" id="inputName" class="form-control" name="type_name" required>
               </div>
             </div>
             <!-- /.card-body -->

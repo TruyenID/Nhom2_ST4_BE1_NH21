@@ -10,7 +10,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">home</a></li>
+              <li class="breadcrumb-item"><a href="index.php">home</a></li>
               <li class="breadcrumb-item active">User Add</li>
             </ol>
           </div>
@@ -36,15 +36,15 @@
             <div class="card-body">
               <div class="form-group">
                 <label for="inputName">UserName</label>
-                <input type="text" id="inputName" class="form-control" name="username">
+                <input type="text" id="inputName" class="form-control" name="username" required>
               </div>
               <div class="form-group">
                 <label for="inputClientCompany">PassWord</label>
-                <input type="password" id="inputClientCompany" class="form-control"  name="password">
+                <input type="password" id="inputClientCompany" class="form-control"  name="password"  required>
               </div>
               <div class="form-group">
               <label for="inputClientCompany">Role_id</label>
-                <input type="number" min="1" max="2" id="inputClientCompany" class="form-control"  name="role_id">
+                <input type="number" min="1" max="2" id="inputClientCompany" class="form-control"  name="role_id"  required>
               </div>
             <!-- /.card-body -->
           </div>
