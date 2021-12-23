@@ -45,7 +45,7 @@
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
-			<form action="billing.php" method="post">
+			<form action="addbill.php" method="post">
 				<div class="row">
 
 					<div class="col-md-7">

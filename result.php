@@ -68,9 +68,19 @@
 											<input type="hidden" name="hidden_typeId" value="<?php echo $value['type_id'];?>">
 										</form>	
 									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-									</div>
+									<form action="cart.php" method="post">
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn">
+												<i class="fa fa-shopping-cart"></i>
+												<input type="submit" name ="addcart" syle="margin:none" value ="Add to cart">			
+												</button>
+											</div>
+											<input type="hidden" name="quantity" value="1">
+											<input type="hidden" name="hidden_name" value="<?php echo $value['name'];?>">
+											<input type="hidden" name="hidden_price" value="<?php echo $value['price'];?>">
+											<input type="hidden" name="hidden_image" value="<?php echo $value['image'];?>">
+											
+											</form>
 								</div>
 							</div>
 							<!-- /product -->
