@@ -10,7 +10,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
               <li class="breadcrumb-item active">Product</li>
             </ol>
           </div>
@@ -70,7 +70,7 @@
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="delete.php?id=<?php echo $value['id']?>">
+                          <a class="btn btn-danger btn-sm" href="delete.php?id=<?php echo $value['id']?>" onclick="return confirm('Bạn Có Muốn Xóa Không?')">
                               <i class="fas fa-trash">
                               </i>
                               Delete

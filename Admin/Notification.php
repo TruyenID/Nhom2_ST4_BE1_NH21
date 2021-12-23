@@ -6,12 +6,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Protype</h1>
+            <h1>Notification</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Protype</li>
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item active">Notification</li>
             </ol>
           </div>
         </div>
@@ -24,7 +24,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Protypes</h3>
+          <h3 class="card-title">Notification</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -61,7 +61,7 @@
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="delete_Notification.php?id=<?php echo $value['id']?>">
+                          <a class="btn btn-danger btn-sm" href="delete_Notification.php?id=<?php echo $value['id']?>" onclick="return confirm('Bạn Có Muốn Xóa Không?')">
                               <i class="fas fa-trash">
                               </i>
                               Delete
