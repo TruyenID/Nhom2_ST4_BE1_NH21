@@ -45,11 +45,11 @@
                 <div class="col-md-3 col-xs-6">
                     <div class="footer">
                         <h3 class="footer-title">About Us</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+                        <p>We exist to unlock creativity.</p>
                         <ul class="footer-links">
-                            <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
-                            <li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
+                            <li><a href="https://www.facebook.com/K%C4%90T-Group-109013094978487/"><i class="fa fa-facebook"></i>Group KĐT</a></li>
+						    <li><a href="mailto:tdkgroup.tdc@gmail.com"><i class="fa fa-envelope-o"></i>kdtgroup.tdc@gmail.com</a></li>
+						    <li><a href="address.html"><i class="fa fa-map-marker"></i>Nguyễn Xiển, Long Thạnh Mỹ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,10 +59,13 @@
                         <h3 class="footer-title">Categories</h3>
                         <ul class="footer-links">
                             <li><a href="#">Hot deals</a></li>
-                            <li><a href="#">Laptops</a></li>
-                            <li><a href="#">Smartphones</a></li>
-                            <li><a href="#">Cameras</a></li>
-                            <li><a href="#">Accessories</a></li>
+                            <?php
+							foreach ($getAllProtype as $value) :
+								$protype = new Protype;
+								$getAllProtype = $protype->getAllProtype();
+							?>
+								<li><a href="products.php?type_id=<?php echo $value['type_id'] ?>"><?php echo $value['type_name'] ?></a></li>
+							<?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
@@ -86,11 +89,10 @@
                     <div class="footer">
                         <h3 class="footer-title">Service</h3>
                         <ul class="footer-links">
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">View Cart</a></li>
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">Track My Order</a></li>
-                            <li><a href="#">Help</a></li>
+                            <li><a href="login.php">My Account</a></li>
+                            <li><a href="cart.php">View Cart</a></li>
+                            <li><a href="whistlist.php">Wishlist</a></li>
+                            <li><a href="billings.php">Track My Order</a></li>                            
                         </ul>
                     </div>
                 </div>

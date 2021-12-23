@@ -803,7 +803,7 @@
 			<!-- /container -->
 		</div>
 		<!-- /SECTION -->
-		<?php include "footer.html" ?>
+		<?php include "footer.php" ?>
 
 		<!-- jQuery Plugins -->
 		<script src="js/jquery.min.js"></script>

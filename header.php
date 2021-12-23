@@ -34,7 +34,7 @@ $getAllNotification = $Notification->getAllNotification();
 			<div id="top-header">
 				<div class="container">
 					<ul class="header-links pull-left">
-					<li><a href="https://www.facebook.com/K%C4%90T-Group-109013094978487/"><i class="fa fa-facebook"></i>Group TDK</a></li>
+					<li><a href="https://www.facebook.com/K%C4%90T-Group-109013094978487/"><i class="fa fa-facebook"></i>Group KĐT</a></li>
 						<li><a href="mailto:tdkgroup.tdc@gmail.com"><i class="fa fa-envelope-o"></i> kdtgroup.tdc@gmail.com</a></li>
 						<li><a href="address.html"><i class="fa fa-map-marker"></i> 200 Nguyễn Xiển, Long Thạnh Mỹ</a></li>
 					</ul>					
@@ -121,13 +121,16 @@ $getAllNotification = $Notification->getAllNotification();
 						<div class="col-md-6">
 							<div class="header-search">
 								<form  method="get"	action="result.php";>
-									<select class="input-select">
-										<option value="0">All Categories</option>
-										<option value="1">Category 01</option>
-										<option value="1">Category 02</option>
-									</select>
-									<input class="input" name="keyword" placeholder="Search here">
-									<button type="submit" class="search-btn">Search</button>
+								<select type="id" name="id" class="input-select" style="width: 150px"> 
+									<option value="0">All Categories</option>
+									<?php
+									$getAllProtype = $protype->getAllProtype();
+									foreach ($getAllProtype as $value) { ?>
+										<option value="<?php echo $value['type_id'] ?>"> <?php echo $value['type_name'] ?> </option>
+									<?php } ?>
+								</select>
+								<input class="input" placeholder="Search here" name="keyword">
+								<button type="submit" name="submit" class="search-btn">Search</button>
 								</form>
 							</div>
 						</div>
