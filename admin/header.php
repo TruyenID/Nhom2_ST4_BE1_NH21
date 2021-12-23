@@ -5,6 +5,8 @@ require "models/product.php";
 require "models/manufactures.php";
 require "models/protype.php";
 require "models/user.php";
+require "models/billing.php";
+$billing = new Billing;
 $protype = new Protype;
 $product = new Product;
 $manu = new Manufacture;
@@ -52,9 +54,6 @@ $user = new User;
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="index.php" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
       </li>
     </ul>
 
@@ -129,11 +128,18 @@ $user = new User;
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item">
+               <li class="nav-item">
+                <a href="index.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Statistical</p>
+                </a>
+                </li>
+                <li class="nav-item">
                 <a href="products.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Products</p>
                 </a>
+                </li>
               </li>
               <li class="nav-item">
                 <a href="addproduct.php" class="nav-link">
@@ -178,6 +184,12 @@ $user = new User;
                   <p>Add User</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="billings.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Billings</p>
+                </a>
+                </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

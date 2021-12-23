@@ -50,4 +50,11 @@
         }     
         return $sql->execute(); //return an object
         }
+        public function countProducts()
+        {
+        $sql = self::$connection->prepare("SELECT COUNT(`id`) FROM `products`");
+        $sql->execute();
+        $item = $sql->get_result()->fetch_row();
+        return $item[0];
+        }
     }
