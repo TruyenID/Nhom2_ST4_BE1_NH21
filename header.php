@@ -1,13 +1,19 @@
-<?php 
+<?php
 require "config.php";
 require "models/db.php";
 require "models/product.php";
+require "models/user.php";
+require "models/Notification.php";
 $product = new Product;
 $getAllProducts = $product->getAllProducts();
 $getProduct = $product->getAllProduct();
 require "protype.php";
 $protype = new protype;
 $getAllProtype = $protype->getAllProtype();
+$Notification = new Notification;
+$getAllNotification = $Notification->getAllNotification();
+
+
 ?>
 <!-- Google font -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -31,13 +37,68 @@ $getAllProtype = $protype->getAllProtype();
 						<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
 						<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
 						<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
-						
 					</ul>					
-					<ul class="header-links pull-right">			
-						<li><a href="billings.php"><i class="fa fa-dollar"></i>Billings</a></li>
-						<li><a href="login.php"><i class="fa fa-user-o"></i>My Account</a></li>					
+					<ul class="header-links pull-right">
+						<li>
+							<a href="billings.php"><i class="fa fa-dollar"></i>Billings</a>
+						</li>
+						<li>
+							<div class="dropdown" >
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+									<i class="fa fa-bell"></i>
+									<span>
+										Thông báo
+									</span>
+								</a>
+								<div class="cart-dropdown">
+									<div class="cart-list">
+										<div class="product-widget">
+											<?php
+                    						$getAllNotification = $Notification->getAllNotification();
+                    						foreach($getAllNotification as $value):
+                  							?>
+											<div class="product-body" style="padding-left:0px">
+												<div class="product-body"  style="padding-left:0px;display:flex;padding-bottom: 15px;">
+													<img style="width:75px" src="img/<?php echo $value['image']?>"alt="">
+													<h3 class="product-name" style="padding-left:10px"><a style="color:#cf1f1f" href="#"><?php echo $value['value'] ?></a></h3>
+												</div>
+											</div>
+											<?php endforeach; ?>		
+										</div>
+										<!-- <div class="product-widget1">
+											<div class="product-body1">
+												<h2 style="font-size:12px" class="product-name1"><a href="register">Register</a></h3>
+											</div>
+										</div> -->
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="dropdown">
+								<a href="cart.php" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+									<i class="fa fa-user-o"></i>
+									<span>
+										My Account
+									</span>
+								</a>
+								<div style="width:110px;background:#100b0b;height:71px;overflow-y: none;" class="cart-dropdown">
+									<div class="cart-list1">
+										<div class="product-widget1">
+											<div class="product-body1">
+												<h2 style="font-size:12px" class="product-name1"><a href="login.php">Login</a></h3>
+											</div>
+										</div>
+										<div class="product-widget1">
+											<div class="product-body1">
+												<h2 style="font-size:12px" class="product-name1"><a href="register">Register</a></h3>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
 					</ul>
-					
 				</div>
 			</div>
 			<!-- /TOP HEADER -->
@@ -50,7 +111,7 @@ $getAllProtype = $protype->getAllProtype();
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="index.php" class="logo">
 									<img src="./img/logo.png" alt="">
 								</a>
 							</div>
@@ -85,22 +146,18 @@ $getAllProtype = $protype->getAllProtype();
 
 								<!-- Cart -->
 								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-									<a href="cart.php">
+									<a href="cart.php" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
 										<span>Your Cart</span>
 									</a>
+									<div class="cart-dropdown">
+										<div class="cart-btns">
+											<a href="cart.php">View Cart</a>
+											<a href="checkout.php">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+										</div>
+									</div>
 								</div>
 								<!-- /Cart -->
-
-								<!-- Menu Toogle -->
-								<div class="menu-toggle">
-									<a href="#">
-										<i class="fa fa-bars"></i>
-										<span>Menu</span>
-									</a>
-								</div>
-								<!-- /Menu Toogle -->
 							</div>
 						</div>
 						<!-- /ACCOUNT -->
