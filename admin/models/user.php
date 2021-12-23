@@ -19,12 +19,12 @@
         }
         public function getUserById($user_id)
         {
-        $sql = self::$connection->prepare("SELECT * FROM  `user` WHERE `user_id` = ?");
-        $sql->bind_param("i",$user_id);
-        $sql->execute();
-        $items = array();
-        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
-        return $items; //return an array
+            $sql = self::$connection->prepare("SELECT * FROM  `user` WHERE `user_id` = ?");
+            $sql->bind_param("i",$user_id);
+            $sql->execute();
+            $items = array();
+            $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+            return $items; //return an array
         }
         public function editUser($username,$password,$role_id,$user_id)
         {       
