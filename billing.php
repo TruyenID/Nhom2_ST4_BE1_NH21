@@ -1,5 +1,11 @@
 <?php
-	session_start();
+session_start();
+if(isset($_POST['first-name'])){$_SESSION['fname'] = $_POST['first-name'];}
+if(isset($_POST['last-name'])){$_SESSION['lname'] = $_POST['last-name'];}
+if(isset($_POST['email'])){$_SESSION['email'] = $_POST['email'];}
+if(isset($_POST['city'])){$_SESSION['city'] = $_POST['city'];}
+if(isset($_POST['country'])){$_SESSION['country'] = $_POST['country'];}
+if(isset($_POST['tel'])){$_SESSION['tel'] = $_POST['tel'];}  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,48 +51,44 @@
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
-			<form action="billing.php" method="post">
 				<div class="row">
 
 					<div class="col-md-7">
 						<!-- Billing Details -->
-					
 						<div class="billing-details">
 							<div class="section-title">
 								<h3 class="title">Billing</h3>
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="first-name" placeholder="First Name">
+								<?php if(isset($_SESSION['fname'])){echo $_SESSION['fname'];}?>
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="last-name" placeholder="Last Name">
+							<?php if(isset($_SESSION['lname'])){echo $_SESSION['lname'];}?>
 							</div>
 							<div class="form-group">
-								<input class="input" type="email" name="email" placeholder="Email">
+							<?php if(isset($_SESSION['email'])){echo $_SESSION['email'];}?>
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="city" placeholder="City">
+							<?php if(isset($_SESSION['city'])){echo $_SESSION['city'];}?>
 							</div>
 							<div class="form-group">
-								<input class="input" type="text" name="country" placeholder="Country">
+							<?php if(isset($_SESSION['country'])){echo $_SESSION['country'];}?>
 							</div>
 							<div class="form-group">
-								<input class="input" type="tel" name="tel" placeholder="Telephone">
+							<?php if(isset($_SESSION['tel'])){echo $_SESSION['tel'];}?>
 							</div>
-						</div>
-						<!--<a href="billing.php" class="primary-btn order-submit">Place order</a>!-->
-						<button class="primary-btn order-submit">
-						<input style="color: #FFF;background-color: #D10024;" type="submit" name ="billing" value ="Place order">					
-						</button>	
+							<form action="deleteBilling.php" method="post">
+							<button class="primary-btn order-submit">
+							Delete Billing
+							</button>	
 												
-						
+							</form>
+						</div>
 						<!-- /Billing Details -->
 					</div>
-
-					<!-- Order Details -->
 					<div class="col-md-5 order-details">
 						<div class="section-title text-center">
-							<h3 class="title">Your Order</h3>
+							<h3 class="title">Your Products</h3>
 						</div>
 						<div class="order-summary">
 							<div class="order-col">
@@ -122,51 +124,12 @@
 							</div>
 							
 						</div>
-						<div class="payment-method">
-							<div class="input-radio">
-								<input type="radio" name="payment" id="payment-1">
-								<label for="payment-1">
-									<span></span>
-									Direct Bank Transfer
-								</label>
-								<div class="caption">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								</div>
-							</div>
-							<div class="input-radio">
-								<input type="radio" name="payment" id="payment-2">
-								<label for="payment-2">
-									<span></span>
-									Cheque Payment
-								</label>
-								<div class="caption">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								</div>
-							</div>
-							<div class="input-radio">
-								<input type="radio" name="payment" id="payment-3">
-								<label for="payment-3">
-									<span></span>
-									Paypal System
-								</label>
-								<div class="caption">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								</div>
-							</div>
-						</div>
-						<div class="input-checkbox">
-							<input type="checkbox" id="terms">
-							<label for="terms">
-								<span></span>
-								I've read and accept the <a href="#">terms & conditions</a>
-							</label>
-						</div>
 						
 					</div>
-					<!-- /Order Details -->
 				</div>
-				</form>
 				<!-- /row -->
+				
+				
 			</div>
 			<!-- /container -->
 		</div>

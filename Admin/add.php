@@ -8,9 +8,9 @@ if(isset($_POST['submit'])){
     $name = $_POST['name'];
     $manu_id = $_POST['manu'];
     $type_id = $_POST['type'];
-    $desc = $_POST['des'];
     $price = $_POST['price'];
     $image = $_FILES['image']['name'];
+    $desc = $_POST['des'];
     $product ->addProducts($name,$manu_id,$type_id,$price,$image,$desc);
     //upload
     $target_dir ="../img/";
