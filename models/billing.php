@@ -52,4 +52,10 @@ class Billing extends Db
         $sql->bind_param("i", $idBill);
         return $sql->execute(); //return an object
         }
+        public function deleteBilling($idBill)
+        {
+        $sql = self::$connection->prepare("DELETE FROM `billing` WHERE `id_bill`=?");
+        $sql->bind_param("i", $idBill);
+        return $sql->execute(); //return an object
+        }
     }

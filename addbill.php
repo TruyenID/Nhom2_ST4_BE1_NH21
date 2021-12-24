@@ -5,7 +5,7 @@ require "models/db.php";
 require "models/product.php";
 require "models/billing.php";
 include "libCart.php";
-$billing = new Billing();
+$billing = new Billing;
         //lay thong tin don hang
         $fname =  $_POST['first-name'];
         $lname =  $_POST['last-name'];

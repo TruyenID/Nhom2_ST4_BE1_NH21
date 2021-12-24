@@ -39,6 +39,11 @@ $billing = new Billing();
                               </i>
                               View
                           </a>
+                          <a class="btn btn-danger btn-sm" href="deleteBilling.php?id_bill=<?php echo $value['id_bill']?>" onclick="return confirm('Bạn Có Muốn Xóa Không?')">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
                       </td>
                 </tr>
                 <?php endforeach; ?>

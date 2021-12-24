@@ -1,11 +1,13 @@
 <?php 
-    session_start();
-    unset($_SESSION['cart']);
-    unset($_SESSION['fname']);
-    unset($_SESSION['lname']);
-    unset($_SESSION['email']);
-    unset($_SESSION['city']);
-    unset($_SESSION['country']);
-    unset($_SESSION['tel']);
-    header('location:billing.php');
+    require "config.php";
+    require "models/db.php";
+    require "models/product.php";
+    require "models/billing.php";
+    include "libCart.php";
+    $billing = new Billing;
+    if(isset($_GET['id_bill'])){
+        $idBill = $_GET['id_bill'];
+        $billing->deleteBilling($idBill);
+    }
+    header('location:billings.php');
 ?>
